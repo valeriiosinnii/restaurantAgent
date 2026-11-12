@@ -1,98 +1,240 @@
 [
   {
-    "id": "pizza_margherita", "name": "Pizza Margherita", "category": "main", "price": 19.5,
+    "id": "pizza_margherita",
+    "name": "Pizza Margherita",
+    "category": "main",
+    "price": 19.5,
     "description": "Tomatensauce, Mozzarella, frisches Basilikum",
-    "ingredients": [{ "ingredientId": "dough", "qty": 1 }, { "ingredientId": "tomato_sauce", "qty": 1 }, { "ingredientId": "mozzarella", "qty": 1 }, { "ingredientId": "basil", "qty": 1 }],
-    "allergens": ["gluten", "lactose"], "tags": ["vegetarian"]
+    "ingredients": [
+      { "ingredientId": "dough", "qty": 1 },
+      { "ingredientId": "tomato_sauce", "qty": 1 },
+      { "ingredientId": "mozzarella", "qty": 1 },
+      { "ingredientId": "basil", "qty": 1 }
+    ],
+    "allergens": ["gluten", "lactose"],
+    "tags": ["vegetarian"]
   },
   {
-    "id": "pizza_diavola", "name": "Pizza Diavola", "category": "main", "price": 22,
+    "id": "pizza_diavola",
+    "name": "Pizza Diavola",
+    "category": "main",
+    "price": 22,
     "description": "Tomatensauce, Mozzarella, scharfe Salami",
-    "ingredients": [{ "ingredientId": "dough", "qty": 1 }, { "ingredientId": "tomato_sauce", "qty": 1 }, { "ingredientId": "mozzarella", "qty": 1 }, { "ingredientId": "salami", "qty": 1 }],
-    "allergens": ["gluten", "lactose"], "tags": ["spicy"]
+    "ingredients": [
+      { "ingredientId": "dough", "qty": 1 },
+      { "ingredientId": "tomato_sauce", "qty": 1 },
+      { "ingredientId": "mozzarella", "qty": 1 },
+      { "ingredientId": "salami", "qty": 1 }
+    ],
+    "allergens": ["gluten", "lactose"],
+    "tags": ["spicy"]
   },
   {
-    "id": "risotto_funghi", "name": "Risotto ai Funghi", "category": "main", "price": 24,
+    "id": "risotto_funghi",
+    "name": "Risotto ai Funghi",
+    "category": "main",
+    "price": 24,
     "description": "Cremiges Risotto mit Pilzen und Parmesan",
-    "ingredients": [{ "ingredientId": "rice", "qty": 1 }, { "ingredientId": "mushrooms", "qty": 1 }, { "ingredientId": "parmesan", "qty": 1 }, { "ingredientId": "butter", "qty": 1 }],
-    "allergens": ["lactose"], "tags": ["vegetarian", "gluten-free"]
+    "ingredients": [
+      { "ingredientId": "rice", "qty": 1 },
+      { "ingredientId": "mushrooms", "qty": 1 },
+      { "ingredientId": "parmesan", "qty": 1 },
+      { "ingredientId": "butter", "qty": 1 }
+    ],
+    "allergens": ["lactose"],
+    "tags": ["vegetarian", "gluten-free"]
   },
   {
-    "id": "zuercher_geschnetzeltes", "name": "Zürcher Geschnetzeltes mit Rösti", "category": "main", "price": 34,
+    "id": "zuercher_geschnetzeltes",
+    "name": "Zürcher Geschnetzeltes mit Rösti",
+    "category": "main",
+    "price": 34,
     "description": "Kalbfleisch an Rahm-Pilzsauce, dazu Rösti",
-    "ingredients": [{ "ingredientId": "veal", "qty": 1 }, { "ingredientId": "mushrooms", "qty": 1 }, { "ingredientId": "cream", "qty": 1 }, { "ingredientId": "potatoes", "qty": 1 }],
-    "allergens": ["lactose"], "tags": ["regional"]
+    "ingredients": [
+      { "ingredientId": "veal", "qty": 1 },
+      { "ingredientId": "mushrooms", "qty": 1 },
+      { "ingredientId": "cream", "qty": 1 },
+      { "ingredientId": "potatoes", "qty": 1 }
+    ],
+    "allergens": ["lactose"],
+    "tags": ["regional"]
   },
   {
-    "id": "caesar_salad", "name": "Caesar Salad mit Poulet", "category": "starter", "price": 18,
+    "id": "caesar_salad",
+    "name": "Caesar Salad mit Poulet",
+    "category": "starter",
+    "price": 18,
     "description": "Römersalat, Poulet, Parmesan, Croutons, Caesar-Dressing",
-    "ingredients": [{ "ingredientId": "lettuce", "qty": 1 }, { "ingredientId": "chicken", "qty": 1 }, { "ingredientId": "parmesan", "qty": 1 }, { "ingredientId": "bread", "qty": 1 }, { "ingredientId": "egg", "qty": 1 }],
-    "allergens": ["gluten", "lactose", "egg"], "tags": []
+    "ingredients": [
+      { "ingredientId": "lettuce", "qty": 1 },
+      { "ingredientId": "chicken", "qty": 1 },
+      { "ingredientId": "parmesan", "qty": 1 },
+      { "ingredientId": "bread", "qty": 1 },
+      { "ingredientId": "egg", "qty": 1 }
+    ],
+    "allergens": ["gluten", "lactose", "egg"],
+    "tags": []
   },
   {
-    "id": "falafel_bowl", "name": "Falafel Bowl", "category": "main", "price": 21,
+    "id": "falafel_bowl",
+    "name": "Falafel Bowl",
+    "category": "main",
+    "price": 21,
     "description": "Falafel, Reis, Salat, Tahini-Dressing",
-    "ingredients": [{ "ingredientId": "chickpeas", "qty": 1 }, { "ingredientId": "rice", "qty": 1 }, { "ingredientId": "lettuce", "qty": 1 }, { "ingredientId": "tahini", "qty": 1 }],
-    "allergens": ["sesame"], "tags": ["vegan", "vegetarian", "gluten-free"]
+    "ingredients": [
+      { "ingredientId": "chickpeas", "qty": 1 },
+      { "ingredientId": "rice", "qty": 1 },
+      { "ingredientId": "lettuce", "qty": 1 },
+      { "ingredientId": "tahini", "qty": 1 }
+    ],
+    "allergens": ["sesame"],
+    "tags": ["vegan", "vegetarian", "gluten-free"]
   },
   {
-    "id": "thai_curry", "name": "Rotes Thai-Curry mit Tofu", "category": "main", "price": 23,
+    "id": "thai_curry",
+    "name": "Rotes Thai-Curry mit Tofu",
+    "category": "main",
+    "price": 23,
     "description": "Tofu in Kokos-Currysauce, Jasminreis, Erdnüsse",
-    "ingredients": [{ "ingredientId": "tofu", "qty": 1 }, { "ingredientId": "coconut_milk", "qty": 1 }, { "ingredientId": "rice", "qty": 1 }, { "ingredientId": "peanuts", "qty": 1 }],
-    "allergens": ["peanuts", "soy"], "tags": ["vegan", "vegetarian", "spicy", "gluten-free"]
+    "ingredients": [
+      { "ingredientId": "tofu", "qty": 1 },
+      { "ingredientId": "coconut_milk", "qty": 1 },
+      { "ingredientId": "rice", "qty": 1 },
+      { "ingredientId": "peanuts", "qty": 1 }
+    ],
+    "allergens": ["peanuts", "soy"],
+    "tags": ["vegan", "vegetarian", "spicy", "gluten-free"]
   },
   {
-    "id": "capuns", "name": "Capuns", "category": "main", "price": 26,
+    "id": "capuns",
+    "name": "Capuns",
+    "category": "main",
+    "price": 26,
     "description": "Bündner Spezialität: Spätzliteig mit Salsiz, in Mangold gewickelt, an Rahmsauce",
-    "ingredients": [{ "ingredientId": "flour", "qty": 1 }, { "ingredientId": "egg", "qty": 1 }, { "ingredientId": "milk", "qty": 1 }, { "ingredientId": "chard", "qty": 1 }, { "ingredientId": "salsiz", "qty": 1 }, { "ingredientId": "cream", "qty": 1 }],
-    "allergens": ["gluten", "egg", "lactose"], "tags": ["regional"]
+    "ingredients": [
+      { "ingredientId": "flour", "qty": 1 },
+      { "ingredientId": "egg", "qty": 1 },
+      { "ingredientId": "milk", "qty": 1 },
+      { "ingredientId": "chard", "qty": 1 },
+      { "ingredientId": "salsiz", "qty": 1 },
+      { "ingredientId": "cream", "qty": 1 }
+    ],
+    "allergens": ["gluten", "egg", "lactose"],
+    "tags": ["regional"]
   },
   {
-    "id": "pizzoccheri", "name": "Pizzoccheri", "category": "main", "price": 24,
+    "id": "pizzoccheri",
+    "name": "Pizzoccheri",
+    "category": "main",
+    "price": 24,
     "description": "Buchweizen-Pasta mit Kartoffeln, Wirz und Bergkäse",
-    "ingredients": [{ "ingredientId": "buckwheat_pasta", "qty": 1 }, { "ingredientId": "potatoes", "qty": 1 }, { "ingredientId": "cabbage", "qty": 1 }, { "ingredientId": "mountain_cheese", "qty": 1 }, { "ingredientId": "butter", "qty": 1 }],
-    "allergens": ["gluten", "lactose"], "tags": ["vegetarian", "regional"]
+    "ingredients": [
+      { "ingredientId": "buckwheat_pasta", "qty": 1 },
+      { "ingredientId": "potatoes", "qty": 1 },
+      { "ingredientId": "cabbage", "qty": 1 },
+      { "ingredientId": "mountain_cheese", "qty": 1 },
+      { "ingredientId": "butter", "qty": 1 }
+    ],
+    "allergens": ["gluten", "lactose"],
+    "tags": ["vegetarian", "regional"]
   },
   {
-    "id": "beef_burger", "name": "Beef Burger mit Pommes", "category": "main", "price": 25,
+    "id": "beef_burger",
+    "name": "Beef Burger mit Pommes",
+    "category": "main",
+    "price": 25,
     "description": "Rindfleisch-Patty, Bergkäse, Salat, Pommes frites",
-    "ingredients": [{ "ingredientId": "bread", "qty": 1 }, { "ingredientId": "beef", "qty": 1 }, { "ingredientId": "mountain_cheese", "qty": 1 }, { "ingredientId": "lettuce", "qty": 1 }, { "ingredientId": "potatoes", "qty": 1 }],
-    "allergens": ["gluten", "lactose"], "tags": []
+    "ingredients": [
+      { "ingredientId": "bread", "qty": 1 },
+      { "ingredientId": "beef", "qty": 1 },
+      { "ingredientId": "mountain_cheese", "qty": 1 },
+      { "ingredientId": "lettuce", "qty": 1 },
+      { "ingredientId": "potatoes", "qty": 1 }
+    ],
+    "allergens": ["gluten", "lactose"],
+    "tags": []
   },
   {
-    "id": "veggie_burger", "name": "Veggie Burger mit Pommes", "category": "main", "price": 23,
+    "id": "veggie_burger",
+    "name": "Veggie Burger mit Pommes",
+    "category": "main",
+    "price": 23,
     "description": "Kichererbsen-Patty, Salat, Pommes frites",
-    "ingredients": [{ "ingredientId": "bread", "qty": 1 }, { "ingredientId": "chickpeas", "qty": 1 }, { "ingredientId": "lettuce", "qty": 1 }, { "ingredientId": "potatoes", "qty": 1 }],
-    "allergens": ["gluten"], "tags": ["vegan", "vegetarian"]
+    "ingredients": [
+      { "ingredientId": "bread", "qty": 1 },
+      { "ingredientId": "chickpeas", "qty": 1 },
+      { "ingredientId": "lettuce", "qty": 1 },
+      { "ingredientId": "potatoes", "qty": 1 }
+    ],
+    "allergens": ["gluten"],
+    "tags": ["vegan", "vegetarian"]
   },
   {
-    "id": "tomato_soup", "name": "Tomatensuppe", "category": "starter", "price": 9.5,
+    "id": "tomato_soup",
+    "name": "Tomatensuppe",
+    "category": "starter",
+    "price": 9.5,
     "description": "Hausgemachte Tomatensuppe mit Rahmhaube",
-    "ingredients": [{ "ingredientId": "tomato_sauce", "qty": 1 }, { "ingredientId": "cream", "qty": 1 }, { "ingredientId": "basil", "qty": 1 }],
-    "allergens": ["lactose"], "tags": ["vegetarian", "gluten-free"]
+    "ingredients": [
+      { "ingredientId": "tomato_sauce", "qty": 1 },
+      { "ingredientId": "cream", "qty": 1 },
+      { "ingredientId": "basil", "qty": 1 }
+    ],
+    "allergens": ["lactose"],
+    "tags": ["vegetarian", "gluten-free"]
   },
   {
-    "id": "salmon_fillet", "name": "Lachsfilet mit Reis", "category": "main", "price": 36,
+    "id": "salmon_fillet",
+    "name": "Lachsfilet mit Reis",
+    "category": "main",
+    "price": 36,
     "description": "Gebratenes Lachsfilet, Butterreis",
-    "ingredients": [{ "ingredientId": "salmon", "qty": 1 }, { "ingredientId": "rice", "qty": 1 }, { "ingredientId": "butter", "qty": 1 }],
-    "allergens": ["fish", "lactose"], "tags": ["gluten-free"]
+    "ingredients": [
+      { "ingredientId": "salmon", "qty": 1 },
+      { "ingredientId": "rice", "qty": 1 },
+      { "ingredientId": "butter", "qty": 1 }
+    ],
+    "allergens": ["fish", "lactose"],
+    "tags": ["gluten-free"]
   },
   {
-    "id": "tiramisu", "name": "Tiramisu", "category": "dessert", "price": 11,
+    "id": "tiramisu",
+    "name": "Tiramisu",
+    "category": "dessert",
+    "price": 11,
     "description": "Mascarpone, Espresso, Löffelbiskuits",
-    "ingredients": [{ "ingredientId": "mascarpone", "qty": 1 }, { "ingredientId": "egg", "qty": 1 }, { "ingredientId": "coffee", "qty": 1 }, { "ingredientId": "flour", "qty": 1 }],
-    "allergens": ["gluten", "egg", "lactose"], "tags": ["vegetarian"]
+    "ingredients": [
+      { "ingredientId": "mascarpone", "qty": 1 },
+      { "ingredientId": "egg", "qty": 1 },
+      { "ingredientId": "coffee", "qty": 1 },
+      { "ingredientId": "flour", "qty": 1 }
+    ],
+    "allergens": ["gluten", "egg", "lactose"],
+    "tags": ["vegetarian"]
   },
   {
-    "id": "sorbet", "name": "Fruchtsorbet", "category": "dessert", "price": 8,
+    "id": "sorbet",
+    "name": "Fruchtsorbet",
+    "category": "dessert",
+    "price": 8,
     "description": "Zwei Kugeln Sorbet aus saisonalen Früchten",
     "ingredients": [{ "ingredientId": "fruit", "qty": 1 }],
-    "allergens": [], "tags": ["vegan", "vegetarian", "gluten-free"]
+    "allergens": [],
+    "tags": ["vegan", "vegetarian", "gluten-free"]
   },
   {
-    "id": "nusstorte", "name": "Bündner Nusstorte", "category": "dessert", "price": 9,
+    "id": "nusstorte",
+    "name": "Bündner Nusstorte",
+    "category": "dessert",
+    "price": 9,
     "description": "Mürbteig mit Baumnuss-Karamell-Füllung",
-    "ingredients": [{ "ingredientId": "flour", "qty": 1 }, { "ingredientId": "walnuts", "qty": 1 }, { "ingredientId": "butter", "qty": 1 }, { "ingredientId": "cream", "qty": 1 }],
-    "allergens": ["gluten", "nuts", "lactose"], "tags": ["vegetarian", "regional"]
+    "ingredients": [
+      { "ingredientId": "flour", "qty": 1 },
+      { "ingredientId": "walnuts", "qty": 1 },
+      { "ingredientId": "butter", "qty": 1 },
+      { "ingredientId": "cream", "qty": 1 }
+    ],
+    "allergens": ["gluten", "nuts", "lactose"],
+    "tags": ["vegetarian", "regional"]
   }
 ]

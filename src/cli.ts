@@ -11,16 +11,26 @@ function createCompleter(): { completer: Completer; label: string } {
   const provider = (process.env.LLM_PROVIDER ?? "anthropic").toLowerCase();
 
   if (provider === "anthropic") {
-    if (!process.env.ANTHROPIC_API_KEY) throw new Error("Missing ANTHROPIC_API_KEY in .env");
+    if (!process.env.ANTHROPIC_API_KEY)
+      throw new Error("Missing ANTHROPIC_API_KEY in .env");
     const model = process.env.ANTHROPIC_MODEL ?? "claude-haiku-5-5";
-    return { completer: anthropicCompleter(new Anthropic(), model), label: `Anthropic ${model}` };
+    return {
+      completer: anthropicCompleter(new Anthropic(), model),
+      label: `Anthropic ${model}`,
+    };
   }
   if (provider === "openai") {
-    if (!process.env.OPENAI_API_KEY) throw new Error("Missing OPENAI_API_KEY in .env");
+    if (!process.env.OPENAI_API_KEY)
+      throw new Error("Missing OPENAI_API_KEY in .env");
     const model = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-    return { completer: openAICompleter(new OpenAI(), model), label: `OpenAI ${model}` };
+    return {
+      completer: openAICompleter(new OpenAI(), model),
+      label: `OpenAI ${model}`,
+    };
   }
-  throw new Error(`Unknown LLM_PROVIDER "${provider}" (use "anthropic" or "openai")`);
+  throw new Error(
+    `Unknown LLM_PROVIDER "${provider}" (use "anthropic" or "openai")`,
+  );
 }
 
 let setup: ReturnType<typeof createCompleter>;
@@ -34,9 +44,13 @@ try {
 
 const debug = process.argv.includes("--debug");
 const store = createStore();
-const agent = new RestaurantAgent(setup.completer, store, (name, args, result) => {
-  if (debug) console.log(`  [tool] ${name}(${args}) -> ${result}`);
-});
+const agent = new RestaurantAgent(
+  setup.completer,
+  store,
+  (name, args, result) => {
+    if (debug) console.log(`  [tool] ${name}(${args}) -> ${result}`);
+  },
+);
 
 const rl = createInterface({ input, output });
 console.log(`Restaurant-Agent (${setup.label}). Tippe "exit" zum Beenden.\n`);
@@ -50,7 +64,10 @@ while (true) {
     const answer = await agent.send(text);
     console.log(`\nAgent: ${answer}\n`);
   } catch (err) {
-    console.error("Fehler beim LLM-Aufruf:", err instanceof Error ? err.message : err);
+    console.error(
+      "Fehler beim LLM-Aufruf:",
+      err instanceof Error ? err.message : err,
+    );
   }
 }
 

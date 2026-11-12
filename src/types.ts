@@ -1,4 +1,13 @@
-export const ALLERGENS = ["gluten", "lactose", "egg", "nuts", "peanuts", "sesame", "soy", "fish"] as const;
+export const ALLERGENS = [
+  "gluten",
+  "lactose",
+  "egg",
+  "nuts",
+  "peanuts",
+  "sesame",
+  "soy",
+  "fish",
+] as const;
 export type Allergen = (typeof ALLERGENS)[number];
 
 export const CATEGORIES = ["starter", "main", "dessert"] as const;

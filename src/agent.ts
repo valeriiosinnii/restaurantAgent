@@ -28,7 +28,12 @@ export type Completer = (
 
 export function openAICompleter(client: OpenAI, model: string): Completer {
   return async (messages, tools) => {
-    const res = await client.chat.completions.create({ model, messages, tools, temperature: 0.2 });
+    const res = await client.chat.completions.create({
+      model,
+      messages,
+      tools,
+      temperature: 0.2,
+    });
     const message = res.choices[0]?.message;
     if (!message) throw new Error("LLM returned no message");
     return message;
@@ -38,12 +43,18 @@ export function openAICompleter(client: OpenAI, model: string): Completer {
 const MAX_STEPS = 8;
 
 export class RestaurantAgent {
-  private readonly messages: ChatCompletionMessageParam[] = [{ role: "system", content: SYSTEM_PROMPT }];
+  private readonly messages: ChatCompletionMessageParam[] = [
+    { role: "system", content: SYSTEM_PROMPT },
+  ];
 
   constructor(
     private readonly complete: Completer,
     private readonly store: Store,
-    private readonly onToolCall?: (name: string, args: string, result: string) => void,
+    private readonly onToolCall?: (
+      name: string,
+      args: string,
+      result: string,
+    ) => void,
   ) {}
 
   /** Sends one guest message and returns the assistant's final answer. */
@@ -59,9 +70,17 @@ export class RestaurantAgent {
       if (toolCalls.length === 0) return message.content ?? "";
 
       for (const call of toolCalls) {
-        const result = executeTool(this.store, call.function.name, call.function.arguments);
+        const result = executeTool(
+          this.store,
+          call.function.name,
+          call.function.arguments,
+        );
         this.onToolCall?.(call.function.name, call.function.arguments, result);
-        this.messages.push({ role: "tool", tool_call_id: call.id, content: result });
+        this.messages.push({
+          role: "tool",
+          tool_call_id: call.id,
+          content: result,
+        });
       }
     }
 

@@ -18,11 +18,16 @@ function textOf(content: ChatCompletionMessageParam["content"]): string {
   return content.map((part) => ("text" in part ? part.text : "")).join("");
 }
 
-export function toAnthropicTools(tools: ChatCompletionTool[]): Anthropic.Tool[] {
+export function toAnthropicTools(
+  tools: ChatCompletionTool[],
+): Anthropic.Tool[] {
   return tools.map((t) => ({
     name: t.function.name,
     description: t.function.description,
-    input_schema: (t.function.parameters ?? { type: "object", properties: {} }) as Anthropic.Tool.InputSchema,
+    input_schema: (t.function.parameters ?? {
+      type: "object",
+      properties: {},
+    }) as Anthropic.Tool.InputSchema,
   }));
 }
 
@@ -53,7 +58,9 @@ export function toAnthropicMessages(messages: ChatCompletionMessageParam[]): {
             type: "tool_use",
             id: call.id,
             name: call.function.name,
-            input: call.function.arguments ? JSON.parse(call.function.arguments) : {},
+            input: call.function.arguments
+              ? JSON.parse(call.function.arguments)
+              : {},
           });
         }
         if (blocks.length) out.push({ role: "assistant", content: blocks });
@@ -68,7 +75,11 @@ export function toAnthropicMessages(messages: ChatCompletionMessageParam[]): {
           content: textOf(m.content),
         };
         const last = out[out.length - 1];
-        if (last?.role === "user" && Array.isArray(last.content) && last.content.every((b) => b.type === "tool_result")) {
+        if (
+          last?.role === "user" &&
+          Array.isArray(last.content) &&
+          last.content.every((b) => b.type === "tool_result")
+        ) {
           last.content.push(block);
         } else {
           out.push({ role: "user", content: [block] });
@@ -84,7 +95,9 @@ export function toAnthropicMessages(messages: ChatCompletionMessageParam[]): {
   return { system, messages: out };
 }
 
-export function fromAnthropicResponse(content: Anthropic.ContentBlock[]): ChatCompletionMessage {
+export function fromAnthropicResponse(
+  content: Anthropic.ContentBlock[],
+): ChatCompletionMessage {
   const text = content
     .filter((b): b is Anthropic.TextBlock => b.type === "text")
     .map((b) => b.text)
@@ -105,7 +118,10 @@ export function fromAnthropicResponse(content: Anthropic.ContentBlock[]): ChatCo
   };
 }
 
-export function anthropicCompleter(client: Anthropic, model: string): Completer {
+export function anthropicCompleter(
+  client: Anthropic,
+  model: string,
+): Completer {
   return async (messages, tools) => {
     const { system, messages: converted } = toAnthropicMessages(messages);
     const res = await client.messages.create({

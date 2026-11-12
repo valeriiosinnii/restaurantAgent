@@ -1,36 +1,198 @@
 [
-  { "id": "dough", "name": "Pizzateig", "unit": "Stk", "qty": 30, "minQty": 10 },
-  { "id": "tomato_sauce", "name": "Tomatensauce", "unit": "Portion", "qty": 40, "minQty": 10 },
-  { "id": "mozzarella", "name": "Mozzarella", "unit": "Portion", "qty": 25, "minQty": 8 },
-  { "id": "basil", "name": "Basilikum", "unit": "Portion", "qty": 20, "minQty": 5 },
-  { "id": "salami", "name": "Salami", "unit": "Portion", "qty": 6, "minQty": 5 },
+  {
+    "id": "dough",
+    "name": "Pizzateig",
+    "unit": "Stk",
+    "qty": 30,
+    "minQty": 10
+  },
+  {
+    "id": "tomato_sauce",
+    "name": "Tomatensauce",
+    "unit": "Portion",
+    "qty": 40,
+    "minQty": 10
+  },
+  {
+    "id": "mozzarella",
+    "name": "Mozzarella",
+    "unit": "Portion",
+    "qty": 25,
+    "minQty": 8
+  },
+  {
+    "id": "basil",
+    "name": "Basilikum",
+    "unit": "Portion",
+    "qty": 20,
+    "minQty": 5
+  },
+  {
+    "id": "salami",
+    "name": "Salami",
+    "unit": "Portion",
+    "qty": 6,
+    "minQty": 5
+  },
   { "id": "rice", "name": "Reis", "unit": "Portion", "qty": 40, "minQty": 10 },
-  { "id": "mushrooms", "name": "Pilze", "unit": "Portion", "qty": 15, "minQty": 5 },
-  { "id": "parmesan", "name": "Parmesan", "unit": "Portion", "qty": 20, "minQty": 5 },
-  { "id": "butter", "name": "Butter", "unit": "Portion", "qty": 40, "minQty": 10 },
-  { "id": "veal", "name": "Kalbfleisch", "unit": "Portion", "qty": 0, "minQty": 4 },
+  {
+    "id": "mushrooms",
+    "name": "Pilze",
+    "unit": "Portion",
+    "qty": 15,
+    "minQty": 5
+  },
+  {
+    "id": "parmesan",
+    "name": "Parmesan",
+    "unit": "Portion",
+    "qty": 20,
+    "minQty": 5
+  },
+  {
+    "id": "butter",
+    "name": "Butter",
+    "unit": "Portion",
+    "qty": 40,
+    "minQty": 10
+  },
+  {
+    "id": "veal",
+    "name": "Kalbfleisch",
+    "unit": "Portion",
+    "qty": 0,
+    "minQty": 4
+  },
   { "id": "cream", "name": "Rahm", "unit": "Portion", "qty": 30, "minQty": 8 },
-  { "id": "potatoes", "name": "Kartoffeln", "unit": "Portion", "qty": 50, "minQty": 10 },
-  { "id": "lettuce", "name": "Salat", "unit": "Portion", "qty": 25, "minQty": 8 },
-  { "id": "chicken", "name": "Poulet", "unit": "Portion", "qty": 10, "minQty": 4 },
-  { "id": "bread", "name": "Brot / Burger-Bun", "unit": "Stk", "qty": 30, "minQty": 10 },
+  {
+    "id": "potatoes",
+    "name": "Kartoffeln",
+    "unit": "Portion",
+    "qty": 50,
+    "minQty": 10
+  },
+  {
+    "id": "lettuce",
+    "name": "Salat",
+    "unit": "Portion",
+    "qty": 25,
+    "minQty": 8
+  },
+  {
+    "id": "chicken",
+    "name": "Poulet",
+    "unit": "Portion",
+    "qty": 10,
+    "minQty": 4
+  },
+  {
+    "id": "bread",
+    "name": "Brot / Burger-Bun",
+    "unit": "Stk",
+    "qty": 30,
+    "minQty": 10
+  },
   { "id": "egg", "name": "Ei", "unit": "Stk", "qty": 40, "minQty": 12 },
-  { "id": "chickpeas", "name": "Kichererbsen", "unit": "Portion", "qty": 20, "minQty": 5 },
-  { "id": "tahini", "name": "Tahini", "unit": "Portion", "qty": 15, "minQty": 4 },
+  {
+    "id": "chickpeas",
+    "name": "Kichererbsen",
+    "unit": "Portion",
+    "qty": 20,
+    "minQty": 5
+  },
+  {
+    "id": "tahini",
+    "name": "Tahini",
+    "unit": "Portion",
+    "qty": 15,
+    "minQty": 4
+  },
   { "id": "tofu", "name": "Tofu", "unit": "Portion", "qty": 12, "minQty": 4 },
-  { "id": "coconut_milk", "name": "Kokosmilch", "unit": "Portion", "qty": 12, "minQty": 4 },
-  { "id": "peanuts", "name": "Erdnüsse", "unit": "Portion", "qty": 15, "minQty": 4 },
+  {
+    "id": "coconut_milk",
+    "name": "Kokosmilch",
+    "unit": "Portion",
+    "qty": 12,
+    "minQty": 4
+  },
+  {
+    "id": "peanuts",
+    "name": "Erdnüsse",
+    "unit": "Portion",
+    "qty": 15,
+    "minQty": 4
+  },
   { "id": "flour", "name": "Mehl", "unit": "Portion", "qty": 40, "minQty": 10 },
   { "id": "milk", "name": "Milch", "unit": "Portion", "qty": 30, "minQty": 8 },
-  { "id": "chard", "name": "Mangold", "unit": "Portion", "qty": 10, "minQty": 4 },
-  { "id": "salsiz", "name": "Salsiz", "unit": "Portion", "qty": 8, "minQty": 3 },
-  { "id": "buckwheat_pasta", "name": "Buchweizen-Pasta", "unit": "Portion", "qty": 12, "minQty": 4 },
-  { "id": "cabbage", "name": "Wirz", "unit": "Portion", "qty": 12, "minQty": 4 },
-  { "id": "mountain_cheese", "name": "Bergkäse", "unit": "Portion", "qty": 20, "minQty": 5 },
-  { "id": "beef", "name": "Rindfleisch-Patty", "unit": "Stk", "qty": 10, "minQty": 4 },
-  { "id": "mascarpone", "name": "Mascarpone", "unit": "Portion", "qty": 10, "minQty": 3 },
-  { "id": "coffee", "name": "Espresso", "unit": "Portion", "qty": 50, "minQty": 10 },
-  { "id": "fruit", "name": "Früchte", "unit": "Portion", "qty": 20, "minQty": 5 },
-  { "id": "walnuts", "name": "Baumnüsse", "unit": "Portion", "qty": 10, "minQty": 3 },
+  {
+    "id": "chard",
+    "name": "Mangold",
+    "unit": "Portion",
+    "qty": 10,
+    "minQty": 4
+  },
+  {
+    "id": "salsiz",
+    "name": "Salsiz",
+    "unit": "Portion",
+    "qty": 8,
+    "minQty": 3
+  },
+  {
+    "id": "buckwheat_pasta",
+    "name": "Buchweizen-Pasta",
+    "unit": "Portion",
+    "qty": 12,
+    "minQty": 4
+  },
+  {
+    "id": "cabbage",
+    "name": "Wirz",
+    "unit": "Portion",
+    "qty": 12,
+    "minQty": 4
+  },
+  {
+    "id": "mountain_cheese",
+    "name": "Bergkäse",
+    "unit": "Portion",
+    "qty": 20,
+    "minQty": 5
+  },
+  {
+    "id": "beef",
+    "name": "Rindfleisch-Patty",
+    "unit": "Stk",
+    "qty": 10,
+    "minQty": 4
+  },
+  {
+    "id": "mascarpone",
+    "name": "Mascarpone",
+    "unit": "Portion",
+    "qty": 10,
+    "minQty": 3
+  },
+  {
+    "id": "coffee",
+    "name": "Espresso",
+    "unit": "Portion",
+    "qty": 50,
+    "minQty": 10
+  },
+  {
+    "id": "fruit",
+    "name": "Früchte",
+    "unit": "Portion",
+    "qty": 20,
+    "minQty": 5
+  },
+  {
+    "id": "walnuts",
+    "name": "Baumnüsse",
+    "unit": "Portion",
+    "qty": 10,
+    "minQty": 3
+  },
   { "id": "salmon", "name": "Lachs", "unit": "Portion", "qty": 1, "minQty": 3 }
 ]

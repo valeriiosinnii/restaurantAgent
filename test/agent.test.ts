@@ -13,12 +13,22 @@ function scriptedCompleter(script: ChatCompletionMessage[]): Completer {
   };
 }
 
-function toolCall(id: string, name: string, args: unknown): ChatCompletionMessage {
+function toolCall(
+  id: string,
+  name: string,
+  args: unknown,
+): ChatCompletionMessage {
   return {
     role: "assistant",
     content: null,
     refusal: null,
-    tool_calls: [{ id, type: "function", function: { name, arguments: JSON.stringify(args) } }],
+    tool_calls: [
+      {
+        id,
+        type: "function",
+        function: { name, arguments: JSON.stringify(args) },
+      },
+    ],
   };
 }
 
@@ -53,18 +63,24 @@ describe("RestaurantAgent", () => {
       step += 1;
       switch (step) {
         case 1:
-          return toolCall("c1", "prepare_order", { items: [{ dishId: "sorbet", quantity: 1 }] });
+          return toolCall("c1", "prepare_order", {
+            items: [{ dishId: "sorbet", quantity: 1 }],
+          });
         case 2: // misbehaving model tries to place the order without asking
           return toolCall("c2", "confirm_order", { draftId: draftId() });
         case 3:
-          return text("1x Fruchtsorbet, total CHF 8.00. Bestätigen Sie die Bestellung?");
+          return text(
+            "1x Fruchtsorbet, total CHF 8.00. Bestätigen Sie die Bestellung?",
+          );
         case 4:
           return toolCall("c3", "confirm_order", { draftId: draftId() });
         default:
           return text("Ihre Bestellung ist aufgegeben.");
       }
     };
-    const agent = new RestaurantAgent(completer, store, (_n, _a, r) => results.push(r));
+    const agent = new RestaurantAgent(completer, store, (_n, _a, r) =>
+      results.push(r),
+    );
 
     await agent.send("Ein Sorbet bitte");
     expect(JSON.parse(results[1]!).ok).toBe(false); // guard kicked in
@@ -77,7 +93,9 @@ describe("RestaurantAgent", () => {
 
   it("stops after too many tool steps", async () => {
     const store = createStore();
-    const loop = Array.from({ length: 20 }, (_, i) => toolCall(`c${i}`, "search_menu", {}));
+    const loop = Array.from({ length: 20 }, (_, i) =>
+      toolCall(`c${i}`, "search_menu", {}),
+    );
     const agent = new RestaurantAgent(scriptedCompleter(loop), store);
     const answer = await agent.send("Hallo");
     expect(answer).toMatch(/zu lange/);
