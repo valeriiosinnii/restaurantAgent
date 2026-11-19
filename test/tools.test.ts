@@ -46,6 +46,23 @@ describe("search_menu", () => {
     expect(all).toContain("zuercher_geschnetzeltes");
   });
 
+  it("validates and returns available drinks by category", () => {
+    const res = call("search_menu", { category: "drink" });
+    expect(res.ok).toBe(true);
+    expect(res.data.map((d: any) => d.id)).toEqual(
+      expect.arrayContaining([
+        "soda",
+        "cola",
+        "tea",
+        "sparkling_water",
+        "still_water",
+        "coffee",
+      ]),
+    );
+    expect(res.data.every((d: any) => d.available)).toBe(true);
+    expect(call("search_menu", { category: "trinken" }).ok).toBe(false);
+  });
+
   it("rejects unknown allergens and extra fields", () => {
     expect(call("search_menu", { excludeAllergens: ["unicorn"] }).ok).toBe(
       false,

@@ -236,5 +236,65 @@
     ],
     "allergens": ["gluten", "nuts", "lactose"],
     "tags": ["vegetarian", "regional"]
+  },
+  {
+    "id": "soda",
+    "name": "Soda",
+    "category": "drink",
+    "price": 4.5,
+    "description": "Erfrischendes Soda",
+    "ingredients": [{ "ingredientId": "soda", "qty": 1 }],
+    "allergens": [],
+    "tags": []
+  },
+  {
+    "id": "cola",
+    "name": "Cola",
+    "category": "drink",
+    "price": 4.5,
+    "description": "Kalte Cola",
+    "ingredients": [{ "ingredientId": "cola", "qty": 1 }],
+    "allergens": [],
+    "tags": []
+  },
+  {
+    "id": "tea",
+    "name": "Tee",
+    "category": "drink",
+    "price": 4.5,
+    "description": "Tee",
+    "ingredients": [{ "ingredientId": "tea", "qty": 1 }],
+    "allergens": [],
+    "tags": []
+  },
+  {
+    "id": "sparkling_water",
+    "name": "Mineralwasser mit Kohlensäure",
+    "category": "drink",
+    "price": 5,
+    "description": "Sprudelndes Mineralwasser",
+    "ingredients": [{ "ingredientId": "sparkling_water", "qty": 1 }],
+    "allergens": [],
+    "tags": []
+  },
+  {
+    "id": "still_water",
+    "name": "Mineralwasser still",
+    "category": "drink",
+    "price": 5,
+    "description": "Stilles Mineralwasser",
+    "ingredients": [{ "ingredientId": "still_water", "qty": 1 }],
+    "allergens": [],
+    "tags": []
+  },
+  {
+    "id": "coffee",
+    "name": "Kaffee",
+    "category": "drink",
+    "price": 4.5,
+    "description": "Frisch gebrühter Kaffee",
+    "ingredients": [{ "ingredientId": "coffee", "qty": 1 }],
+    "allergens": [],
+    "tags": []
   }
 ]

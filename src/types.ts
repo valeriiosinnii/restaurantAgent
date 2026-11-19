@@ -10,7 +10,7 @@ export const ALLERGENS = [
 ] as const;
 export type Allergen = (typeof ALLERGENS)[number];
 
-export const CATEGORIES = ["starter", "main", "dessert"] as const;
+export const CATEGORIES = ["starter", "main", "dessert", "drink"] as const;
 export type Category = (typeof CATEGORIES)[number];
 
 export interface IngredientUse {

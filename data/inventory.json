@@ -194,5 +194,22 @@
     "qty": 10,
     "minQty": 3
   },
-  { "id": "salmon", "name": "Lachs", "unit": "Portion", "qty": 1, "minQty": 3 }
+  { "id": "salmon", "name": "Lachs", "unit": "Portion", "qty": 1, "minQty": 3 },
+  { "id": "soda", "name": "Soda", "unit": "Glas", "qty": 30, "minQty": 8 },
+  { "id": "cola", "name": "Cola", "unit": "Glas", "qty": 30, "minQty": 8 },
+  { "id": "tea", "name": "Tee", "unit": "Tasse", "qty": 30, "minQty": 8 },
+  {
+    "id": "sparkling_water",
+    "name": "Mineralwasser mit Kohlensäure",
+    "unit": "Glas",
+    "qty": 30,
+    "minQty": 8
+  },
+  {
+    "id": "still_water",
+    "name": "Mineralwasser still",
+    "unit": "Glas",
+    "qty": 30,
+    "minQty": 8
+  }
 ]
